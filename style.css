@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?&family=Poppins:wght@300;400;500;600;900');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #007bff !important;
+}
+.view{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.view span{
+    height: 100%;
+    width: 100px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    padding: 5px 22px;
+    cursor: pointer;
+    transition: all .4s ease;
+    border: 2px dashed rgba(0,0,0,0.9);
+    opacity: 0.5;
+}
+.view span.active{
+    opacity: 1;
+}
+.result{
+    background-color: #007bff;
+    padding: 8px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.result span{
+    font-size: 18px;
+    font-weight: 600;
+}
+.result .vs{
+    margin: 0 10px;
+    font-size: 30px;
+}
+.result.shake{
+    animation: shake 0.5s ease-in-out;
+}
+@keyframes shake{
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-13px);
+    }
+    50% {
+        transform: translateX(13px);
+    }
+    75% {
+        transform: translateX(-8px);
+    }
+    100% {
+        transform: translateX(8px);
+    }
+}
+.list-group-item{
+    padding: 6px 30px !important;
+    background-color: #007bff2e !important;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.list-group-item .text{
+    pointer-events: none;
+    user-select: none;
+}
+.list-group-item .icon{
+    pointer-events: none;
+    user-select: none;
+}
+.list-group-item.disabled{
+    pointer-events: none;
+}
+.list-group-item:hover{
+    color: #fff;
+    background-color: #007bffd6 !important;
+}
